@@ -3,9 +3,9 @@
 # Push: docker push 848331400135.dkr.ecr.eu-central-1.amazonaws.com/labor-prod-pipelines:conventional-release
 FROM node:10-alpine
 
-MAINTAINER LABOR digital <info@labor.digital>
+MAINTAINER TIME2TRI GmbH <hallo@time2tri.me>
 
-LABEL description="Labor Digital Bitbucket Pipelines: Conventional Release"
+LABEL description="TIME2TRI Bitbucket Pipelines: Conventional Release"
 
 RUN apk --update add curl jq git bash
 

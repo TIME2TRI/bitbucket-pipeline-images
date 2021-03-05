@@ -12,11 +12,11 @@ NPM_REGISTRY_USER=${NPM_REGISTRY_USER:-$NPM_DEFAULT_REGISTRY_USER}
 NPM_REGISTRY_PW=${NPM_REGISTRY_PW:-$NPM_DEFAULT_REGISTRY_PW}
 NPM_REGISTRY_EMAIL=${NPM_REGISTRY_EMAIL:-$NPM_DEFAULT_REGISTRY_EMAIL}
 
-echo "Logging into registry..."
+echo "Logging into registry $NPM_REGISTRY_URL as $NPM_REGISTRY_USER..."
 npm set registry "https://$NPM_REGISTRY_URL"
 npm-cli-login -u "$NPM_REGISTRY_USER" -p "$NPM_REGISTRY_PW" -r "https://$NPM_REGISTRY_URL" -e "$NPM_REGISTRY_EMAIL" --quotes --config-path=/root/.npmrc
 
-echo "Requesting oAuth token..."
+echo "Requesting oAuth token using $GIT_PUSH_BACK_OAUTH_ID..."
 export access_token=$(curl -s -X POST -u "${GIT_PUSH_BACK_OAUTH_ID}:${GIT_PUSH_BACK_OAUTH_SECRET}" \
 	https://bitbucket.org/site/oauth2/access_token \
 	-d grant_type=client_credentials -d scopes="repository"| jq --raw-output '.access_token')

@@ -353,8 +353,8 @@ but you may override them with the following OPTIONAL environment vars.
 **Optional:**
 
 - RELEASE_DIR (_DEFAULT: "${BITBUCKET_CLONE_DIR}"_, which is the directory, where the "release" will take place.)
-- GIT_PUSH_BACK_OAUTH_ID (_DEFAULT: "${GIT_OAUTH_ID}"_, which is set account-wide)
-- GIT_PUSH_BACK_OAUTH_SECRET (_DEFAULT: "${GIT_OAUTH_SECRET}"_, which is set account-wide)
+- GIT_PUSH_BACK_OAUTH_ID (_DEFAULT: "${BITBUCKET_DEFAULT_OAUTH_ID}"_, which is set account-wide)
+- GIT_PUSH_BACK_OAUTH_SECRET (_DEFAULT: "${BITBUCKET_DEFAULT_OAUTH_SECRET}"_, which is set account-wide)
 - GIT_PUSH_BACK_REPO_OWNER (_DEFAULT: "${BITBUCKET_REPO_OWNER}"_, which is set in all pipelines)
 - GIT_PUSH_BACK_REPO_SLUG (_DEFAULT: "${BITBUCKET_REPO_SLUG}"_, which is set in all pipelines)
 - NPM_REGISTRY_URL (_DEFAULT: "${NPM_DEFAULT_REGISTRY_URL}"_, which is set account-wide)
